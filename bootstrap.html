@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html lang="en">
+<head>
+<title>JavaScript</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<form autocomplete="on" >
+	
+		<input type="number" id="text1"  class="form-control" required />
+		<input type="text" id="text2" value="Rebecca" class="form-control" readonly />
+		<input type="number" id="text3" class="form-control" disabled />
+		<input type="text" id="text4" class="form-control" size="4"  autofocus/>
+		<input type="text" id="text5" class="form-control" maxlength="3" autofocus/>
+		step wala : <input type="number" id="text10" class="form-control" step="5" autofocus/>
+		PinCode :<input type="text" id="text6" class="form-control" pattern="[A-Za-z]{4}" />
+		
+		
+		Email :<input type="email" id="text5" class="form-control" maxlength="40" class="form-control" autocomplete="on" />
+		
+		Country code: <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+		Country : <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="One letter country code">
+
+		<input type="submit" class="btn btn-info" >
+
+		<input type="button" class="btn btn-info" value="Ok" name="bot"/>
+		<input type="reset" class="btn btn-info" value="Reset"/>
+		
+		
+		<p id="demo"> </p>
+	</form>
+</div>
+
+<script type="text/javascript">
+	
+	
+	function Validator(){
+		var num = document.getElementById("text1");
+		if(num.validity.badInput)
+		{
+			document.getElementById("demo").innerHTML = num.validationMessage;
+		}
+		else
+		{
+			document.getElementById("demo").innerHTML = "Input OK" ;
+		}
+	}
+</script>
+</body>
+</html>
